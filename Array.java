@@ -92,34 +92,44 @@ public class Array{
     System.out.println("the element at position (r,c) is : " + element);
 
   }
-}
+}  
 
 
-// import java.util.*;
+//    24/09/24
 
-// public class tUf {
-//     public static long nCr(int n, int r) {
-//         long res = 1;
 
-//         // calculating nCr:
-//         for (int i = 0; i < r; i++) {
-//             res = res * (n - i);
-//             res = res / (i + 1);
-//         }
-//         return res;
-//     }
+// this is the first approach when the question is given that to print the element in the (i,j) positions.
 
-//     public static int pascalTriangle(int r, int c) {
-//         int element = (int) nCr(r - 1, c - 1);
-//         return element;
-//     }
+import java.util.*;
 
-//     public static void main(String[] args) {
-//         int r = 5; // row number
-//         int c = 3; // col number
-//         int element = pascalTriangle(r, c);
-//         System.out.println("The element at position (r,c) is: " + element);
-//     }
-// }  
+public class Array{
+
+  public static long nCr(int n, int r){
+
+    long res = 1;
+
+    for(int i=0; i<r; i++){
+
+      res = res * (n - i);
+      res = res / (i + 1);
+    }
+
+    return res;
+  }
+
+  public static int pascalTriangle(int r, int c){
+
+    int element = (int) nCr(r-1, c-1);
+    return element;
+  }
+  public static void main(String[] args) {
+    int r = 5;
+    int c = 3;
+
+    int element = pascalTriangle(r, c);
+    System.out.println("the element at position (r,c) is : " + element);
+
+  }
+}  
         
         
